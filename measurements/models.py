@@ -17,7 +17,7 @@ class Project(models.Model):
 
 class Measurement(models.Model):
     """Измерение температуры на объекте."""
-
+    
     value = models.FloatField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     created_at = models.DateTimeField(
